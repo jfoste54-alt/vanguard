@@ -228,3 +228,14 @@ header h1::before {
 
 /* MEDIA QUERIES (LARGE) */
 
+@media screen and (min-width: 1024px) {
+    .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .services-area {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
