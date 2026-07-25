@@ -122,6 +122,93 @@ a {
     margin: 0 auto;
 }
 
+/* HEADER AND NAVIGATION */
+header {
+    background-color: var(--black);
+    border-bottom: 3px solid var(--blue);
+}
+
+.header-top {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 0;
+    position: relative;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    font-size: 1.5rem;
+}
+
+.hidden-heading {
+    visibility: hidden;
+    height: 1px;
+    margin: 0;
+    overflow: hidden;
+}
+
+#menu-option {
+    display: none;
+}
+
+.menu-button {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 1.4rem;
+    right: 0;
+    width: 2rem;
+}
+
+.menu-button span {
+    display: block;
+    width: 2rem;
+    height: 0.2rem;
+    margin-bottom: 0.35rem;
+    background-color: var(--white);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+nav ul {
+    max-height: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: max-height 0.3s ease-out;
+}
+
+nav a {
+    display: block;
+    padding: 1rem;
+    color: var(--blue);
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--charcoal);
+}
+
+#menu-option:checked ~ nav ul {
+    max-height: 500px;
+}
+
+#menu-option:checked + .menu-button span:nth-child(1) {
+    transform: translateY(0.55rem) rotate(45deg);
+}
+
+#menu-option:checked + .menu-button span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-option:checked + .menu-button span:nth-child(3) {
+    transform: translateY(-0.55rem) rotate(-45deg);
+}
+
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
  #hero {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
@@ -154,6 +241,8 @@ header h1::before {
         transform: translateY(-0.5rem);
     }
 }
+
+
 
 
 /* THIS ONE IS DONE FOR YOU */
@@ -218,6 +307,8 @@ header h1::before {
 .growth {
     width: 50%;
     min-width: 0;
+}
+
 }
 
 
