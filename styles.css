@@ -205,20 +205,26 @@ header h1::before {
 
 /* MEDIA QUERIES (MEDIUM) */ 
 
+@media screen and (min-width: 800px) {
+
     #results {
         grid-template-columns: 1fr 1fr;
     }
-    .results-container {
+
+    .results-area {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }
-    .results-table {
-        width: 50%;
-    }
-    .bar-chart {
-        width: 50%;
+        gap: 2rem;
     }
 
+    .profits,
+    .growth {
+        width: 50%;
+        min-width: 0;
+    }
+
+}
 
 /* MEDIA QUERIES (LARGE) */
 
