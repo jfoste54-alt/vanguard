@@ -446,6 +446,27 @@ footer a {
 
 @media screen and (min-width: 800px) {
 
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-button {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    max-height: none;
+    overflow: visible;
+}
+
+nav a {
+    padding: 0.5rem;
+}
+
 .results-area {
     display: flex;
     flex-direction: row;
