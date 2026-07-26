@@ -486,15 +486,24 @@ nav a {
 /* MEDIA QUERIES (LARGE) */
 
 @media screen and (min-width: 1024px) {
-    .header-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
 
     .services-area {
-        display: grid;
-        gap: 1rem;
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    form {
+        grid-template-columns: 1fr 1fr;
+        gap:  1.5rem;
+        align-items: start;
+    }
+
+    .message-field {
+        grid-column: 1;
+    }
+
+    form button {
+        grid-column: 2;
+        align-self: start;
+        width: 100%;
     }
 }
