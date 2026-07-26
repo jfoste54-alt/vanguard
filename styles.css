@@ -249,6 +249,18 @@ header h1::before {
     background-color: rgba(0, 0, 0, 0.72);
 }
 
+@keyframes dropFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-top h2 {
     font-size: 2rem;
 }
@@ -304,13 +316,27 @@ button:focus {
     transform: translateY(-0.25rem);
 }
 
-/* RESULTS */
 #results {
     padding: 2rem 0;
     background-color: var(--blue);
     color: var(--white);
 }
- 
+
+#results h2,
+#results p,
+.growth {
+    opacity: 0;
+    animation: dropFadeIn 1s ease-out forwards;
+}
+
+#results p {
+    animation-delay: 0.2s;
+}
+
+.growth {
+    animation-delay: 0.6s;
+}
+
 .results-area {
     display: block;
 }
@@ -342,11 +368,15 @@ tbody tr:nth-child(even) {
    background-color: var(--charcoal);
 }
 
-/* CONTACT */
 #contact {
    padding: 2rem 0;
    background-color: var(--black);
    color: var(--white);
+}
+
+#contact h2 {
+    opacity: 0;
+    animation: dropFadeIn 1s ease-out forwards;
 }
 
 form {
@@ -379,7 +409,6 @@ textarea:focus {
     outline: 2px solid var(--red);
 }
  
-/* FOOTER */
 footer {
     padding: 2rem 1rem;
     background-color: var(--black);
